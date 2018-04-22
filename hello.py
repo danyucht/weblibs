@@ -8,5 +8,7 @@ app = Flask(__name__)
 
 @app.route("/get/url",methods = ["POST"])
 def hello():
-     return json.dumps(sd.pickwords(request.json['url']))
-     
+    print request.json['url']
+    a = json.dumps(sd.pickwords(request.json['url']))
+    print a
+    return a
