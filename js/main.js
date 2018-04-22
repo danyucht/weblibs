@@ -58,7 +58,7 @@ var replaceWords = function(custom_obj) {
 	    var regex = new RegExp(key, 'g');
 	    $contents.each(function () {
 	        if (this.nodeType == 3) {
-	            $(this).replaceWith("test").append("<img style='z-index:999999' src='https://2.bp.blogspot.com/-PjMjGxn40YM/T_9RQ0iz9FI/AAAAAAAAAVY/zeZhWWS6a0k/s1600/Rutgers+Logo.png'/><h1 style='z-index:999999;color:red'>RU RU RU RUTGERS</h1>")
+	            this.nodeValue = this.nodeValue.replace(regex, value);
 	        }
 	    })
 	});
