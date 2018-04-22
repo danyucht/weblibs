@@ -1,0 +1,28 @@
+ {
+    "replacewords":{
+    "Paul" : "NNP",
+    "yields" : "NNS",
+    "long-end" : "JJ",
+    "traders" : "NNS",
+    "just" : "RB",
+    "sales" : "NNS",
+    "Taggart/Bloomberg" : "NNP",
+    "Peter" : "NNP",
+    "Treasuries" : "NNS",
+    "commodities" : "NNS",
+    "10-year" : "JJ",
+    "10-year" : "JJ",
+    "percent" : "NN",
+    "market" : "NN",
+    "Paul" : "NNP",
+    "bank" : "NN",
+    "portfolio" : "NN",
+    "pressure" : "VB",
+    "strategy" : "NN",
+    "gaze" : "NN",
+    "Yields" : "NNS",
+    "increases" : "NNS",
+    "macro" : "NN",
+    "traders" : "NNS",
+    "focus" : "VB"
+    }}
