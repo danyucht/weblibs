@@ -14,9 +14,9 @@ reltags = """CD JJ JJR JJS
     VB VBZ VBD """
     
 
-def pickwords(qpage):
+def pickwords(url):
     # query website and return html to varialbe page
-    page = urllib2.urlopen(qpage)
+    page = urllib2.urlopen(url)
 
     # parse the html using beautiful soup and store in variable `soup`
     soup = BS(page, 'html.parser')
@@ -43,10 +43,10 @@ def pickwords(qpage):
         while (reltags.find(b[1]) == -1):
             b = choice(a)
         replace.append(b)
-        print b
+        #print b
     #print replace
     return replace
     
 
         
-pickwords(qpage)
+#pickwords(qpage)
