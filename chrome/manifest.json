@@ -5,7 +5,7 @@
   "description": "Converts web articles into madlibs games",
   "version": "1.0",
   "background": {
-    "scripts": ["js/background.js"],
+    "scripts": ["js/background.js", "js/jquery.min.js"],
     "persistent": true
   },
 

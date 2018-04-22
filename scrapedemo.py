@@ -1,7 +1,9 @@
 # import libraries
-import urllib2
+import urllib.request #urllib2
 from bs4 import BeautifulSoup as BS
-import nltk.tokenize as token
+import nltk # import nltk.tokenize as tonkenize
+# nltk.download('punkt')
+# nltk.download('averaged_perceptron_tagger')
 from nltk import pos_tag
 from random import choice
 from json import JSONEncoder
@@ -18,7 +20,7 @@ reltags = """CD JJ JJR JJS
 
 def pickwords(url):
     # query website and return html to varialbe page
-    page = urllib2.urlopen(url)
+    page = urllib.request.urlopen(url).read() # urllib2.urlopen(url)*
 
     # parse the html using beautiful soup and store in variable `soup`
     soup = BS(page, 'html.parser')
@@ -26,14 +28,14 @@ def pickwords(url):
     pars = []
     pos_list = []
     numwords = 0
-    print paragraphs
+    print(paragraphs)
     for p in paragraphs:
-        print p
+        print(p)
         pars.append(p.contents[0])
-    print pars
+    print(pars)
     for i in pars:
         i = i.encode('utf-8')#.strip()
-        pos = token.word_tokenize(i.decode('utf-8'))
+        pos = nltk.tokenize.word_tokenize(i.decode('utf-8')) #tokenize.
         numwords += len(pos)
         pos = pos_tag(pos)
         pos_list.append(pos)
@@ -49,7 +51,7 @@ def pickwords(url):
         while(not (a) or not (a[0][0].isalpha())):
             a = choice(pos_list)
         b = choice(a)
-        while (reltags.find(b[1]) == -1 or not (b[0].isalpha) or not(b[0].find('\u')==-1) or (len(b[0]) ==1)):
+        while (reltags.find(b[1]) == -1 or not (b[0].isalpha) or not(b[0].find('\\u')==-1) or (len(b[0]) == 1) or (len(b[0]) <4)): #\u
             b = choice(a)
         replace.append(b)
         #print b
